@@ -1,87 +1,84 @@
-# Welcome to React Router!
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+[![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=for-the-badge&logo=vercel)](https://your-project-name.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+An intelligent web application that provides smart, actionable feedback on your resume using the power of AI. Built with React and the serverless Puter.js platform, this tool helps you optimize your resume for your dream job.
 
-## Features
+### [➡️ View Live Demo](https://your-project-name.vercel.app)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+![AI Resume Analyzer Screenshot](https://i.imgur.com/vHqLd6f.png)
 
-## Getting Started
+## ✨ Features
 
-### Installation
+* **📄 Secure Resume Upload:** Upload your resume in PDF format directly from your device.
+* **🧠 AI-Powered Analysis:** Leverages Anthropic's Claude 3.5 Sonnet via the Puter.js API to perform a deep analysis of your resume's content, structure, and phrasing.
+* **🚀 Instant Feedback:** Receive constructive, point-by-point feedback in seconds.
+* **💻 Modern & Responsive UI:** A clean, intuitive, and mobile-friendly interface built with React.
+* **🌐 Serverless Architecture:** Runs entirely in the browser with no backend servers to manage, thanks to the Puter.js platform.
 
-Install the dependencies:
+## 🛠️ Tech Stack
 
-```bash
-npm install
-```
+* **Frontend:** [React](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/)
+* **Platform:** [Puter.js](https://puter.com/) for user authentication, file storage, and AI API calls.
+* **AI Model:** Anthropic's Claude 3.5 Sonnet
+* **Deployment:** [Vercel](https://vercel.com/)
 
-### Development
+## 🤔 How It Works
 
-Start the development server with HMR:
+This project demonstrates the power of a fully serverless, "user-pays" application model using Puter.js.
 
-```bash
-npm run dev
-```
+1.  **Authentication:** The user authenticates using their Puter account. This grants the application secure, temporary access to the user's resources.
+2.  **File Upload:** The resume is uploaded directly to the logged-in user's private Puter Drive.
+3.  **API Call:** The frontend calls the `puter.ai.chat()` function, passing a reference to the uploaded file's path and a specific prompt for resume analysis.
+4.  **Analysis:** The AI analysis is performed on behalf of the user, consuming *their* Puter account's AI credits.
+5.  **Feedback:** The generated feedback is streamed back to the user's browser and displayed on the screen.
 
-Your application will be available at `http://localhost:5173`.
+## 🚀 Getting Started
 
-## Building for Production
+To run this project on your local machine, follow these steps:
 
-Create a production build:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    ```
 
-```bash
-npm run build
-```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-repo-name
+    ```
 
-## Deployment
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-### Docker Deployment
+4.  **Set up environment variables:**
+    * Create a file named `.env` in the root of the project.
+    * Add your Puter App's Client ID to it. You can find this in your app's settings on puter.com.
+    ```
+    VITE_PUTER_CLIENT_ID=your-puter-app-client-id
+    ```
 
-To build and run using Docker:
+5.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-```bash
-docker build -t my-app .
+6.  Open your browser and navigate to `http://localhost:5173`.
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+## 🚢 Deployment
 
-The containerized application can be deployed to any platform that supports Docker, including:
+This application is designed for easy deployment on [Vercel](https://vercel.com/).
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+1.  Import your Git repository into Vercel.
+2.  Use the `Vite` framework preset.
+3.  Verify the **Output Directory** is set to `dist`.
+4.  **Crucially**, after your first deployment, you must add your Vercel URL (e.g., `https://your-project-name.vercel.app`) to the **Authorized Origins** list in your Puter App's settings to avoid CORS errors.
 
-### DIY Deployment
+## 📄 License
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ---
-
-Built with ❤️ using React Router.
+_This project was created as a demonstration of building powerful, serverless AI applications with Puter.js._

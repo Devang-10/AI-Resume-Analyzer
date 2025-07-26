@@ -21,7 +21,7 @@ An intelligent web application that provides smart, actionable feedback on your 
 
 * **Frontend:** [React](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/)
 * **Platform:** [Puter.js](https://puter.com/) for user authentication, file storage, and AI API calls.
-* **AI Model:** Anthropic's Claude 3.5 Sonnet
+* **AI Model:** Anthropic's Claude 3.7 Sonnet
 * **Deployment:** [Vercel](https://vercel.com/)
 
 ## 🤔 How It Works
